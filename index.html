@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#3b5bdb"><title>Sudoku</title>
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="style.css">
+</head><body>
+<div id="app">
+ <header>
+  <h1>Sudoku</h1>
+  <select id="level"><option>Easy</option><option selected>Medium</option><option>Hard</option><option>Expert</option></select>
+  <button id="newBtn">New</button>
+  <button id="themeBtn" title="Theme">🌓</button>
+ </header>
+ <div class="status"><span id="mist">Mistakes: 0</span><span id="timer">00:00</span><button id="pauseBtn">⏸</button></div>
+ <div id="boardWrap"><div id="board"></div><div id="pausedOv" hidden>Paused</div></div>
+ <div class="tools">
+  <button id="undoBtn">↶ Undo</button><button id="redoBtn">↷ Redo</button>
+  <button id="eraseBtn">⌫ Erase</button><button id="notesBtn">✎ Notes</button><button id="hintBtn">💡 Hint</button>
+ </div>
+ <div id="pad"></div>
+ <label class="opt"><input type="checkbox" id="mistChk" checked> Highlight mistakes</label>
+</div>
+<div id="win" hidden><div class="card"><h2>🎉 Solved!</h2><p id="winTxt"></p><button id="winNew">New game</button></div></div>
+<script src="app.js"></script>
+</body></html>
